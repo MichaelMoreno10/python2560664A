@@ -1,0 +1,10 @@
+primernum=10
+segundonum=5
+suma=primernum+segundonum
+print(suma)
+resta=primernum-segundonum
+print(resta)
+multiplicacion=primernum*segundonum
+print(multiplicacion)
+division=primernum/segundonum
+print(division)
