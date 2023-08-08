@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda de Ropa - Tienda de Ropa</title>
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Búsqueda de Ropa - Tienda de Ropa</h1>
+    </header>
+
+    <div class="contenido">
+        <form class="form-busqueda" onsubmit="return false;">
+            <div class="titulo">
+                <h2>Buscar Ropa</h2>
+            </div>
+            <div class="entrada">
+                <label>Filtrar por nombre:</label>
+                <input type="text" id="filtro" onkeyup="filtrarProductos()" placeholder="Escribe el nombre del producto...">
+            </div>
+            <div id="contenedorProductos">
+                <div class="producto-camiseta">
+                    <h3>Camiseta</h3>
+                    <p>Precio: $20</p>
+                </div>
+                <div class="producto">
+                    <h3>Pantalón</h3>
+                    <p>Precio: $30</p>
+                </div>
+                <div class="producto">
+                    <h3>Blusa</h3>
+                    <p>Precio: $25</p>
+                </div>
+                
+            </div>
+        </form>
+    </div>
+
+    <div class="menu">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="basicos.html">Entradas Basicas</a></li>
+            <li><a href="registro.html">Form Registro</a></li>
+            <li><a href="acceso.html">Iniciar Sesion</a></li>
+            <li><a href="buscar.html" class="activo">Form Búsqueda</a></li>
+            <li><a href="validar.html">Form Validación</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function filtrarProductos() {
+            var input, filtro, contenedor, productos, i, nombreProducto, txtValue;
+            input = document.getElementById("filtro");
+            filtro = input.value.toUpperCase();
+            contenedor = document.getElementById("contenedorProductos");
+            productos = contenedor.getElementsByClassName("producto");
+
+            for (i = 0; i < productos.length; i++) {
+                nombreProducto = productos[i].getElementsByTagName("h3")[0];
+                txtValue = nombreProducto.textContent || nombreProducto.innerText;
+                if (txtValue.toUpperCase().indexOf(filtro) > -1) {
+                    productos[i].style.display = "block";
+                } else {
+                    productos[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

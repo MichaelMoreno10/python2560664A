@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Tienda de Ropa</title>
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Registro - Tienda de Ropa</h1>
+    </header>
+
+    <div class="contenido">
+        <form class="my-custom-form" action="procesar_registro.php" method="POST">
+            <div class="my-custom-title">
+                <h2>Crear una cuenta nueva</h2>
+            </div>
+            <div class="my-custom-input">
+                <label>Nombre completo</label>
+                <input type="text" name="nombre" placeholder="Nombre y Apellido" required>
+            </div>
+            <div class="my-custom-input">
+                <label>Correo electrónico</label>
+                <input type="email" name="email" placeholder="Ejemplo@email.com" required>
+            </div>
+            <div class="my-custom-input">
+                <label>Contraseña</label>
+                <input type="password" name="password" placeholder="Contraseña segura" required>
+            </div>
+            <div class="my-custom-input">
+                <label>Fecha de nacimiento</label>
+                <input type="date" name="fecha_nacimiento" required>
+            </div>
+            <div class="my-custom-input">
+                <label>Género</label>
+                <select name="genero" required>
+                    <option value="">Seleccionar género</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+            <div class="my-custom-submit">
+                <input type="submit" value="Registrarse">
+            </div>
+        </form>
+    </div>
+
+    <div class="menu">
+        <ul>
+            <li> <a href="index.html">Inicio</a></li>
+            <li> <a href="basicos.html" class="activo">Entradas basicas</a></li>
+            <li> <a href="registro.html">Form Registro</a></li>
+            <li> <a href="acceso.html">Iniciar Sesion</a></li>
+            <li> <a href="buscar.html">Form Busqueda</a></li>
+            <li> <a href="validar.html">Form Validacion</a></li>
+        </ul>
+    </div>
+</body>
+</html>

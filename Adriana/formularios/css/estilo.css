@@ -1,0 +1,458 @@
+
+/* Importar fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,200&family=Mulish:ital,wght@0,300;0,400;1,200&family=Oswald:wght@200;600&family=Roboto:wght@100&display=swap');
+
+/* Reset de margen y relleno para todos los elementos */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales para el cuerpo del documento */
+body {
+    background: rgb(172, 170, 170);
+    font-family: 'Mulish', sans-serif;
+}
+
+/* Estilos para el encabezado */
+header {
+    background: rgb(202, 199, 199);
+    padding: 20px; /* Reduje el relleno superior e inferior */
+    width: 100%;
+    height: 120px; /* Reduje la altura del encabezado */
+    position: relative;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para el título principal */
+h1 {
+    color: rgb(0, 0, 0);
+    font-size: 36px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 10px;
+}
+
+/* Estilos para el logotipo */
+.logo {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    left: 20px; /* Ajusté el margen izquierdo */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Estilos para el contenido */
+.contenido {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0 20px; /* Añadí relleno a los lados del contenido */
+}
+
+img {
+    float: right;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+}
+
+p {
+    font-size: 18px; /* Reduje el tamaño de fuente */
+    text-align: justify;
+    padding: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* Estilos para el menú */
+.menu {
+    height: 70px; /* Reduje la altura del menú */
+    background-color: rgb(202, 199, 199);
+    list-style: none;
+    padding: 10px 0; /* Ajusté el relleno superior e inferior */
+    text-align: center;
+    margin-bottom: 50px; /* Reduje el margen inferior */
+}
+
+ul li {
+    display: inline-block;
+    margin: 0 10px; /* Añadí un margen horizontal */
+}
+
+ul a {
+    text-decoration: none;
+    color: #dcdce9;
+    background-color: #6f0385;
+    padding: 10px 16px;
+    border-radius: 5px;
+    opacity: 0.8;
+    font-size: 18px; /* Reduje el tamaño de fuente */
+    display: inline-block;
+    line-height: 1;
+    outline: none;
+    transition: 0.2s ease;
+    font-family: 'Mulish', sans-serif;
+}
+
+ul li a.activo {
+    background: rgb(8, 4, 42);
+    transform: none;
+    opacity: 1; /* Añadí opacidad para el enlace activo */
+}
+
+ul li a:hover {
+    opacity: 1;
+}
+
+/*--------------
+estilo formulario basico
+-------------*/
+
+.form-basico {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 55px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    font: bold 14px sans-serif;
+    text-align: center;
+}
+
+.entrada {
+    text-align: left;
+    margin-bottom: 22px;
+}
+
+.titulo {
+    text-align: center;
+    display: inline-block;
+    box-sizing: border-box;
+    color: #4c565e;
+    font-size: 24px;
+    padding: 0 10px 15px;
+    border-bottom: 2px solid rgb(19, 19, 59);
+    margin: 0;
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.form-basico .entrada label {
+    display: inline-block;
+    box-sizing: border-box;
+    color: #5F5F5F;
+    width: 180px;
+    text-align: left;
+    vertical-align: top;
+    padding: 12px 25px;
+}
+
+.form-basico input[type=text],
+.form-basico input[type=email], 
+.form-basico input[type=password]{
+    color: #5f5f5f;
+    box-sizing: border-box;
+    width: 240px;
+    box-shadow: 1px 2px 4px 0 rgba(37, 26, 110, 0.08);
+    padding: 12px;
+    border: 1px solid #dbdbdb;
+}
+
+.form-basico input[type=radio],
+.form-basico input[type=checkbox] {
+    box-shadow: none;
+    width: auto;
+}
+
+.form-basico input[type=checkbox] {
+    margin-top: 13px;
+}
+
+.form-basico select {
+    background-color: #ffffff;
+    color: #5f5f5f;
+    box-sizing: border-box;
+    max-width: 240px;
+    width: 240px;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: 12px 8px;
+    border: 1px solid #dbdbdb;
+}
+
+.form-basico textarea {
+    color: #5f5f5f;
+    box-sizing: border-box;
+    width: 240px;
+    height: 100px;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    font: normal 13px sans-serif;
+    padding: 12px;
+    border: 1px solid #dbdbdb;
+    resize: vertical;
+}
+
+.opciones {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.opciones div {
+    margin-top: 10px;
+}
+
+.opciones label span {
+    margin-left: 8px;
+    color: #5f5f5f;
+    font-weight: normal;
+}
+
+.opciones input {
+    width: auto;
+}
+
+.form-basico input[type=button] {
+    display: block;
+    border-radius: 2px;
+    background-color: rgb(19, 19, 59);
+    color: #ffffff;
+    font-weight: bold;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: 14px 22px;
+    border: 0;
+    margin: 40px 183px 0;
+    font-family: 'Mulish', sans-serif;
+    font-size: 20px;
+}
+
+/* Estilos para campos válidos */
+input:required:valid,
+textarea:required:valid {
+    border: 1px solid green;
+}
+
+/* Estilos para campos inválidos */
+input:required:invalid,
+textarea:required:invalid {
+    border: 1px solid red;
+}
+
+/*  diseño responsivo*/
+
+@media (max-width: 600px) {
+    .form-basico {
+        padding: 30px;
+        max-width: 480px;
+    }
+    .form-basico .entrada {
+        max-width: 300px;
+        margin: 25px auto;
+        text-align: left;
+    }
+    .form-basico .titulo {
+        margin-bottom: 50px;
+    }
+    .form-basico .entrada>label span {
+        display: block;
+        text-align: left;
+        padding: 0 0 15px;
+    }
+    .form-basico select {
+        width: 240px;
+    }
+    .form-basico input[type=checkbox] {
+        margin-top: 0;
+    }
+    .form-basico .opciones>div {
+        margin: 0 0 10px;
+    }
+    .form-basico button {
+        margin: 0;
+    }
+}
+.my-custom-form {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+.my-custom-title {
+    text-align: left;
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.my-custom-input {
+    margin-bottom: 15px;
+}
+
+.my-custom-input label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.my-custom-input input[type="text"],
+.my-custom-input input[type="email"],
+.my-custom-input input[type="password"],
+.my-custom-input select {
+    
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 400px;
+    text-align: left;
+    vertical-align: top;
+    padding: 8px;
+}
+
+.my-custom-input input[type="date"] {
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 400px;
+    text-align: left;
+    vertical-align: top;
+    padding: 8px;
+}
+
+.my-custom-submit {
+    text-align: center;
+}
+
+.my-custom-submit input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.my-custom-submit input[type="submit"]:hover {
+    background-color: #555;
+}
+.contenido {
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 21px;
+}
+
+------------------------------------------------------------------------------------------------------------------------------------
+/*acceso
+------------------------------------------------------------------------------------
+.my-custom-form 
+    /* ... (otros estilos para el formulario) ... */
+    {    max-width: 400px;
+    margin: 0 auto;
+}
+
+.my-custom-input label {
+    /* ... (otros estilos para las etiquetas) ... */
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.my-custom-input input[type="text"],
+.my-custom-input input[type="password"] {
+    /* ... (otros estilos para los campos de entrada) ... */
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.my-custom-submit input[type="submit"] {
+    /* ... (otros estilos para el botón de envío) ... */
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Estilos para el enlace de registro */
+.registro-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.registro-link a {
+    color: #333;
+}
+
+/* Estilos para los enlaces de inicio de sesión con redes sociales */
+.social-login {
+    text-align: left;
+    margin-top: 15px;
+    display: block;
+}
+
+.social-login > * {
+    display: block;
+    margin-bottom: 10px; 
+}
+
+
+
+.social-login p {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.social-login a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #fff;
+    background-color: #333;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+/*}.producto-camiseta{
+    background :linear-gradient(rgb(6, 36, 118),rgb(255, 255, 255));
+    margin: 80px;
+    
+/* Agrega este código al final de tu archivo de estilos */
+.contenido {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px; /* Añadí un relleno para separar del borde */
+}
+
+.producto-camiseta{
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    width: calc(33.33% - 20px); /* Distribuir en tres columnas y restar el margen */
+    box-sizing: border-box;
+}
+
+.producto-camiseta h3,
+.producto h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.producto-camiseta p,
+.producto p {
+    font-size: 18px;
+    color: #777;
+}
+}

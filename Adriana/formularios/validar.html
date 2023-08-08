@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENTRADAS BASICAS</title>
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <header>
+        <h1>ENTRADAS BASICAS</h1>
+    </header>
+
+    <div class="contenido">
+        <form class="form-basico" action="#">
+            <div class="titulo">
+                <h2>Inputs Basicos</h2>
+            </div>
+            <div class="entrada">
+                <label>Entrada tipo texto</label>
+                <!-- Al escribir algo en el campo, se llama a la función validarCampo() para cambiar el borde -->
+                <input type="text" placeholder="Nombre Completo" required oninput="validarCampo(this)">
+            </div>
+            <div class="entrada">
+                <label>Entrada tipo email</label>
+                <!-- Al escribir algo en el campo, se llama a la función validarCampo() para cambiar el borde -->
+                <input type="email" placeholder="Ejemplo@email.com" required oninput="validarCampo(this)">
+            </div>
+            <div class="entrada">
+                <label>Entrada tipo menu deplegable</label>
+                <!-- Al seleccionar una opción, se llama a la función validarCampo() para cambiar el borde -->
+                <select name="select" required onchange="validarCampo(this)">
+                    <option>opcion 1</option>
+                    <option>opcion 2</option>
+                    <option>opcion 3</option>
+                </select>
+            </div>
+            <div class="entrada">
+                <label>Entrada tipo password</label>
+                <!-- Al escribir algo en el campo, se llama a la función validarCampo() para cambiar el borde -->
+                <input type="password" placeholder="Ejemplo1234*" required oninput="validarCampo(this)">
+            </div>
+            <div class="entrada">
+                <label>Entrada tipo caja de verificacion</label>
+                <input type="checkbox" required><label>Acepto terminos</label>
+            </div>
+            <div class="entrada">
+                <label>Entrada tipo caja de verificacion circular</label>
+                <div class="opciones">
+                    <!-- Al seleccionar una opción, se llama a la función validarCampo() para cambiar el borde -->
+                    <div>
+                        <label>
+                            <input type="radio" name="radio" required onchange="validarCampo(this)">
+                            <span>Opcion 1</span>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="radio" name="radio" required onchange="validarCampo(this)">
+                            <span>Opcion 2</span>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="radio" name="radio" required onchange="validarCampo(this)">
+                            <span>Opcion 3</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="entrada">
+                <label>Entrada tipo area grande de texto (300++ catacteres)</label>
+                <!-- Al escribir algo en el campo, se llama a la función validarCampo() para cambiar el borde -->
+                <textarea name="textarea" required oninput="validarCampo(this)"></textarea>
+            </div>
+            <div class="boton">
+                <!-- Al hacer clic en el botón, se llama a la función enviar() -->
+                <input type="button" value="Enviar" onclick="enviar()">
+            </div>
+        </form>
+    </div>
+   
+    <div class="menu">
+        <ul>
+            <!-- Enlaces de navegación -->
+            <li> <a href="index.html">Inicio</a></li>
+            <li> <a href="basicos.html" class="activo">Form Validacion</a></li>
+            <li> <a href="registro.html">Form Registro</a></li>
+            <li> <a href="acceso.html">Iniciar Sesion</a></li>
+            <li> <a href="buscar.html">Form Busqueda</a></li>
+            <li> <a href="validar.html">Entradas Basicas</a></li>
+        </ul>
+    </div>
+
+    <script>
+        
+        function validarCampo(inputElement) {
+            if (inputElement.hasAttribute("required") && inputElement.value.trim() === "") {
+                alert("Por favor, complete el campo requerido.");
+            }
+        }
+
+        
+        function enviar() {
+            var inputs = document.getElementsByTagName("input");
+            var textarea = document.getElementsByTagName("textarea")[0];
+            
+            var formValid = true;
+
+            
+            for (var i = 0; i < inputs.length; i++) {
+                if (inputs[i].hasAttribute("required") && inputs[i].value.trim() === "") {
+                    formValid = false;
+                    alert("Por favor, complete todos los campos requeridos.");
+                    break;
+                }
+            }
+
+            
+            if (textarea.hasAttribute("required") && textarea.value.trim() === "") {
+                formValid = false;
+                alert("Por favor, complete todos los campos requeridos.");
+            }
+
+            
+            if (formValid) {
+                alert("Enviando Datos....");
+                document.getElementsByTagName("form")[0].submit();
+            }
+        }
+    </script>
+</body>
+</html>

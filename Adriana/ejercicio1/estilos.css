@@ -1,0 +1,97 @@
+/* Estilos para el encabezado */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    padding: 22px 0;
+    background-color: #ffffff;
+}
+header {
+    background-color: #e28fb6;
+    color: #000000;
+    padding: 10px;
+    text-align: center;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    background-image: url('ruta_del_archivo_del_logo.png');
+    background-repeat: no-repeat;
+    background-size: 50px; /* Tamaño del logo en píxeles */
+    background-position: 10px center; /* Ajusta la posición del logo */
+    padding-left: 70px; /* Espacio a la izquierda para mostrar el logo */
+    }
+
+
+
+
+
+nav a {
+    text-decoration: none;
+    color:rgba(240, 230, 247, 0.719);
+    font-weight: bold;
+    font-family: italic;
+}
+
+/* Estilos para el contenedor del contenido */
+.contencion {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos para el encabezado del contenido */
+.encabezado_contenido {
+    background-color: #995f5f;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Estilos para el título principal */
+h1 {
+    font-size: 32px;
+    margin: 0;
+}
+
+/* Estilos para los títulos secundarios */
+h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Estilos para los elementos de la lista de aprendices */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    color: #000000;
+}
+
+/* Estilos para el enlace dentro de la lista */
+ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+/* Estilos para los enlaces al pasar el mouse */
+ul li a:hover {
+    background-color: #333;
+    color: #000000;
+}
+
+body {
+    background-color: #000000;
+  }
+  

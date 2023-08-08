@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Tienda de Ropa</title>
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Iniciar Sesión - Tienda de Ropa</h1>
+    </header>
+
+    <div class="contenido">
+        <form class="my-custom-form" action="procesar_login.php" method="POST">
+            <div class="my-custom-title">
+                <h2>Iniciar Sesión</h2>
+            </div>
+            <div class="my-custom-input">
+                <label>Usuario o Correo electrónico</label>
+                <input type="text" name="usuario" placeholder="Usuario o Correo" required>
+            </div>
+            <div class="my-custom-input">
+                <label>Contraseña</label>
+                <input type="password" name="password" placeholder="Contraseña" required>
+            </div>
+            <div class="my-custom-submit">
+                <input type="submit" value="Iniciar Sesión">
+            </div>
+        </form>
+
+        <div class="registro-link">
+            <p>¿No tienes una cuenta? <a href="registro.html">Regístrate aquí</a></p>
+        </div>
+
+        <div class="social-login">
+            <p>O inicia sesión con:</p>
+            <LI><a href="https://www.facebook.com">Facebook</a></LI> 
+            <LI><a href="https://www.instagram.com/">Instagram</a></LI>
+            <LI><a href="https://www.google.com/?hl=es">Google</a></LI>
+        </div>
+    </div>
+
+    <div class="menu">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="basicos.html">Entradas básicas</a></li>
+            <li><a href="registro.html" class="activo">Iniciar Sesion</a></li>
+            <li><a href="acceso.html">Form Registro</a></li>
+            <li><a href="buscar.html">Form Búsqueda</a></li>
+            <li><a href="validar.html">Form Validación</a></li>
+        </ul>
+    </div>
+</body>
+</html>
+
